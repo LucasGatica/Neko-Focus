@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NekoFocus</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              cozy: {
+                bg: '#FFF8F3',       // Very light peach/cream
+                text: '#4A4A4A',     // Darker Gray for better contrast (was #5D5D5D)
+                primary: '#FFB7B2',  // Soft Salmon/Pink
+                secondary: '#B5EAD7',// Mint/Sage Green
+                accent: '#E2F0CB',   // Light Lime/Cream
+                purple: '#C7CEEA',   // Periwinkle
+                card: '#FFFFFF',
+                brown: '#6D4C41',    // Darker Brown for text accents (was #8D6E63)
+              }
+            },
+            fontFamily: {
+              sans: ['Quicksand', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom Animations for Cats */
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-6px); }
+      }
+      @keyframes wiggle {
+        0%, 100% { transform: rotate(-3deg); }
+        50% { transform: rotate(3deg); }
+      }
+      @keyframes breathe {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.02); }
+      }
+      .animate-float { animation: float 4s ease-in-out infinite; }
+      .animate-wiggle { animation: wiggle 2s ease-in-out infinite; }
+      .animate-breathe { animation: breathe 4s ease-in-out infinite; }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.33.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-cozy-bg text-cozy-text overflow-hidden selection:bg-cozy-primary selection:text-white">
+    <div id="root"></div>
+  </body>
+</html>
